@@ -42,12 +42,18 @@
                 },
                 videoId: '5UeUMG4W5b8',
                 events: {
-					'onReady': onPlayerReady,
-					'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
-                    'onStateChange': onPlayerStateChange,
-                    'onError': onPlayerError
+					'onReady': onPlayerReady
+					// 'onReady': onPlayerReady,
+					// 'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+                    // 'onStateChange': onPlayerStateChange,
+                    // 'onError': onPlayerError
                 }
 			});
+        }
+
+		function onPlayerReady(event) {
+			event.target.setVolume(50);
+            event.target.playVideo();
         }
 	</script>
 	
