@@ -28,6 +28,28 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!--YouTube API-->
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script>
+		var player;
+		function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+				// height: '360',
+                width: '100%',
+				playerVars: {
+					'autoplay': 1,
+                    'controls': 0
+                },
+                videoId: '5UeUMG4W5b8',
+                events: {
+					'onReady': onPlayerReady,
+					'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+                    'onStateChange': onPlayerStateChange,
+                    'onError': onPlayerError
+                }
+			});
+        }
+	</script>
 	
 	</head>
 
@@ -454,9 +476,10 @@
 							<i class="icon-credit-card"></i>
 							<p>농협</p>
 							<p>123-123-123</p>
-							<div>
+							<!-- <div>
 								<iframe width="352" height="626" src="https://www.youtube.com/embed/5UeUMG4W5b8?autoplay=1&mute=1" title="결혼합니다結婚します" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-							</div>
+							</div> -->
+							<div id="player"></div>
 						</div>
 					</div>
 				</div>
