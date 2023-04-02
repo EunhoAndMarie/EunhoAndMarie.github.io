@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .wedding-couple-heading {
   /* margin-bottom: 2em; */
   font-size: 60px;
-  color: #F14E95;
+  color: #000000;
 }
 
 @media screen and (max-width: 768px) {
