@@ -255,14 +255,19 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #wedding-address-heading-ko,
+#wedding-address-info-ko,
 #wedding-address-context-ko{
   font-family: "Song Myung", Arial,serif;
 }
 
 #wedding-address-heading-jp,
+#wedding-address-info-jp,
 #wedding-address-context-jp{
   font-family: "Yuji Syuku", Arial, serif;
 }
+
+
+
 
 /* 123 */
 @media screen and (max-width: 768px) {
@@ -277,6 +282,28 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 10px;
   }
 } */
+
+
+
+.wedding-address-info {
+  /* margin-bottom: 2em; */
+  font-size: 30px;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .wedding-address-info #wedding-address-info-ko,
+  .wedding-address-info #wedding-address-info-jp {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .wedding-address-info #wedding-address-info-ko,
+  .wedding-address-info #wedding-address-info-jp {
+    font-size: 15px;
+  }
+}
+
 
 
 
