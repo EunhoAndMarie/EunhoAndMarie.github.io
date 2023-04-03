@@ -144,14 +144,15 @@
 							<div></div>
 							<span id="wedding-address-info-ko">경남 창원시 성산구 중앙대로 69</span>
 							<div></div>
-							<span><button class="btn btn-default btn-sm" id="wedding-address-heading-ko">주소 복사</button></span>
+							<input type="text" value="경남 창원시 성산구 중앙대로 69" id="addressKor" style="display: none;">
+							<span><button class="btn btn-default btn-sm" id="wedding-address-heading-ko" onclick="copyTextContent(2)">주소 복사</button></span>
 							<span><a href="https://naver.me/FKK1F4C0" class="btn btn-default btn-sm" id="wedding-address-heading-ko">네이버맵</a></span>
 							<span><a href="http://kko.to/0uaE9byi4Y" class="btn btn-default btn-sm" id="wedding-address-heading-ko">카카오맵</a></span>
 						</div>
 						<div class="col-md-8 col-md-offset-2 text-center wedding-address-info animate-box">
 							<span id="wedding-address-info-jp">ホテルインターナショナル 2階 Nouvelle</span>
 							<div></div>
-							<span><button class="btn btn-default btn-sm" id="wedding-address-heading-jp">住所コピー</button></span>
+							<span><button class="btn btn-default btn-sm" id="wedding-address-heading-jp" onclick="copyTextContent(2)">住所コピー</button></span>
 							<span><a href="https://naver.me/FKK1F4C0" class="btn btn-default btn-sm" id="wedding-address-heading-jp">Naverマップ</a></span>
 							<span><a href="http://kko.to/0uaE9byi4Y" class="btn btn-default btn-sm" id="wedding-address-heading-jp">Kakaoマップ</a></span>
 						</div>
@@ -346,35 +347,23 @@
 							<span id="wedding-couple-heading-ko">마음 전하실 곳</span>
 						</div>
 						<div class="col-md-8 col-md-offset-2 text-center wedding-account-info animate-box">
-							<span class="material-symbols-outlined">Flight</span>
+							<div class="padding-blank"></div>
+							<p>송구스럽지만</p>
+							<p>계좌번호를 기재하게 되었습니다</p>
+							<p>참석이 어려우시더라도</p>
+							<p>축하해주시는 마음만으로도</p>
+							<p>진심으로 감사의 말씀을 드립니다</p>
+							<p>행복하게 잘 살겠습니다</p>
+							<div class="padding-blank"></div>
 							<i class="icon-user"></i>
-							<p>이춘애</p>
+							<p>김희석(신랑측 아버지)</p>
 							<i class="icon-credit-card"></i>
 							<p>농협</p>
-							<p>123-123-123</p>
+							<p>862-02-117971</p>
+							<input type="text" value="862-02-117971" id="accountKor" style="display: none;">
+							<span><button class="btn btn-default btn-sm" id="wedding-address-heading-ko" onclick="copyTextContent(1)">계좌번호복사</button></span>
 
-							<span class="material-symbols-outlined">Flight</span>
-							<i class="icon-user"></i>
-							<p>이춘애</p>
-							<i class="icon-credit-card"></i>
-							<p>농협</p>
-							<p>123-123-123</p>
-							<span class="material-symbols-outlined">Flight</span>
-							<i class="icon-user"></i>
-							<p>이춘애</p>
-							<i class="icon-credit-card"></i>
-							<p>농협</p>
-							<p>123-123-123</p>
-							<span class="material-symbols-outlined">Flight</span>
-							<i class="icon-user"></i>
-							<p>이춘애</p>
-							<i class="icon-credit-card"></i>
-							<p>농협</p>
-							<p>123-123-123</p>
-							
-
-							<div id="player"></div>
-
+							<!-- <div id="player"></div> -->
 							
 						</div>
 					</div>
@@ -425,6 +414,24 @@
 				day: dday.getDate(),
 				enableUtc: false
 			});
+		</script>
+
+		<script>
+			//Copy
+			function copyTextContent(a){
+				var accountKor = document.getElementById("accountKor");
+				var addressKor = document.getElementById("addressKor");
+				var copyText;
+				if(a < 2){
+					copyText = accountKor;
+				}else{
+					copyText = addressKor;
+				}
+				copyText.select();
+				copyText.setSelectionRange(0,99999);
+				navigator.clipboard.writeText(copyText.value);
+				// alert(copyText.value);
+			}
 		</script>
 
 	</body>
