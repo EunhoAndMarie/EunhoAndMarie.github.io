@@ -258,28 +258,45 @@ h1, h2, h3, h4, h5, h6, figure {
 #wedding-address-info-ko,
 #wedding-address-context-ko{
   font-family: "Song Myung", Arial,serif;
+  color: #000;
 }
 
 #wedding-address-heading-jp,
 #wedding-address-info-jp,
 #wedding-address-context-jp{
   font-family: "Yuji Syuku", Arial, serif;
+  color: #000;
 }
 
 
 
 
+
+
+
 /* 123 */
+@media screen and (max-width: 2570px) {
+  .wedding-address-context #wedding-address-context-ko,
+  .wedding-address-context #wedding-address-context-jp {
+    font-size: 25px;
+  }
+}
 @media screen and (max-width: 768px) {
   .wedding-address-context #wedding-address-context-ko,
   .wedding-address-context #wedding-address-context-jp {
     font-size: 20px;
   }
 }
-/* @media screen and (max-width: 424px) {
+@media screen and (max-width: 424px) {
   .wedding-address-context #wedding-address-context-ko,
   .wedding-address-context #wedding-address-context-jp {
-    font-size: 10px;
+    font-size: 17px;
+  }
+}
+/* @media screen and (max-width: 374) {
+  .wedding-address-context #wedding-address-context-ko,
+  .wedding-address-context #wedding-address-context-jp {
+    font-size: 13px;
   }
 } */
 
@@ -354,7 +371,8 @@ h1, h2, h3, h4, h5, h6, figure {
   #wedding-address .event-wrap {
     margin-top: 8px;
     margin-bottom: 8px;
-    width: auto;
+    /* width: auto; */
+    /* width: 100%; */
   }
 }
 /* #wedding-address .event-wrap h3 {
@@ -719,15 +737,29 @@ form label {
 
 
 #wedding-header .display-tc .header-jp,
-#wedding-header .display-tc .header-ko,
-#wedding-header .info-date .header-jp,
-#wedding-header .info-date .header-ko,
-.wedding-cover .display-tc .header-jp,
-.wedding-cover .display-tc .header-ko {
+#wedding-header .display-tc .header-ko {
   margin: 0;
   padding: 0;
   font-size: 50px;
   line-height: 1.5;
+  color: white;
+  /* color: rgb(2, 65, 41); */
+  /* color: rgb(0, 0, 0); */
+  /* color: #F14E95; */
+}
+
+#wedding-header .info-date{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#wedding-header .info-date .header-jp p,
+#wedding-header .info-date .header-ko p{
+  margin-bottom: 0px;
+  /* margin-top: 10px; */
+  padding: 0;
+  /* font-size: 15px; */
+  /* line-height: 1.5; */
   color: white;
 }
 
@@ -762,10 +794,10 @@ form label {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 2570px) {
   #wedding-header .info-date .header-jp,
 #wedding-header .info-date .header-ko{
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -833,6 +865,15 @@ form label {
   font-size: 12px;
   /* words */
 }
+
+
+@media screen and (max-width: 374px) {
+  .simply-countdown > .simply-section,
+  .simply-countdown > .simply-section > div {
+    width: 55px;
+  }
+}
+
 
 #fh5co-testimonial,
 #wedding-event,
@@ -1337,4 +1378,9 @@ a.active {
 .padding-blank{
   padding-bottom: 50px;
 }
-
+.padding-blank2{
+  padding-bottom: 10px;
+}
+.color-change{
+  color: #F14E95 !important;
+}
